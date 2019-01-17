@@ -6,30 +6,35 @@
 
 
 #The actual implentation
-
+import binascii
 import hashlib
 
 def merkletreeroot(arr):
     # initialize
     la = len(arr)
     for i in xrange(la):
-        arr[i] = hashlib.sha256(arr[i]).hexdigest()
+        v = arr[i].encode('utf-8')
+        v = hashlib.sha256(v).hexdigest()
+        v = bytearray.fromhex(v)
+        arr[i] = v
     #build
     while len(arr) != 1:
         tmp = []
         la = len(arr)
+
         for i in xrange(0, la, 2):
             left=arr[i]
-            rigth = arr[i+1] if la != i+1 else ""
-            tmp.append(hashlib.sha256(left+rigth).hexdigest())
+            rigth = arr[i+1] if la != i+1 else b''
+            v = hashlib.sha256(left+rigth).digest()
+            tmp.append(v)
 
         arr = tmp
-    return arr[0]
+    return binascii.hexlify(arr[0])
 
 print merkletreeroot(["a", "b", "c","d"])
-print "58c89d709329eb37285837b042ab6ff72c7c8f74de0446b091b6a0131c102cfd"
+print "14ede5e8e97ad9372327728f5099b95604a39593cac3bd38a343ad76205213e7"
 
 print merkletreeroot(["a", "b", "c"])
-print "35172c364a0d06a3ddbd3869ff682dd0395fad299787cda9c74cea0a14d8dc41"
+print "e76328b6ca10676c686a0d534e8222ad8da04fdfe14c6f6ff67d08cbbd24c605"
 
 
