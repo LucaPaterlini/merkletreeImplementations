@@ -15,6 +15,8 @@
  wrong handling of the odd lists 
  https://github.com/bitcoin/bitcoin/blob/bccb4d29a8080bf1ecda1fc235415a11d903a680/src/consensus/merkle.cpp 
  
+ A1.py shows this inmplentation instead
+ 
   # Question 2
  
  Isn't it better to avoid the Second preimage attack as proposed on wiki https://en.wikipedia.org/wiki/Merkle_tree
