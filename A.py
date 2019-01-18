@@ -1,8 +1,5 @@
-#THE PROPOSED test
-
-#Given an array of byte objects generate a Merkle root hash using the SHA256 algorithm.
-# Time: 15 minutes Input: ["a", "b", "c", "d"] Output: 14ede5e8e97ad9372327728f5099b95604a39593cac3bd38a343ad76205213e7
-# Input: ["a", "b", "c"] Output: e76328b6ca10676c686a0d534e8222ad8da04fdfe14c6f6ff67d08cbbd24c605
+# IDEA
+# Add an empty byte to each odd level
 
 
 #The actual implentation
