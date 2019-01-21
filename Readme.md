@@ -4,6 +4,9 @@
  -  C.py Evan Kozliner implentation https://github.com/evankozliner/merkle-tree
  -  D.py tutorial example https://github.com/JaeDukSeo/Simple-Merkle-Tree-in-Python
  -  E.py lib package merkletree https://github.com/jvsteiner/merkletree
+ -  F.py lib package pymerkle(python 3) https://github.com/FoteinosMearg/pymerkle
+ 
+ N.B. none of those different implentations returns the same output on the same input
  
  # Question
  
@@ -25,3 +28,8 @@
  
  P.S. I am in the comptia (https://www.comptia.org/) council regarding blokchain and my first tought was to currectly address 
  and define what a merkle tree is and how to calculate its root
+
+#Answers
+
+Feel free to open inssues with your answers on this github repo.
+Tk in advance for your feedback, LP
